@@ -1,0 +1,11 @@
+*** Object Files to Link.
+#+begin_src 
+  ./build/iPhoneOS-11.3-Development/objs/init.o
+  ./build/iPhoneOS-11.3-Development/objs/main.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/UIKit_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/Foundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/CoreGraphics_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/CoreFoundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/CFNetwork_stubs.o
+  ./build/iPhoneOS-11.3-Development/objs/Users/brian/Projects/crashing-on-17/app/app_delegate.rb.o
+#+end_src

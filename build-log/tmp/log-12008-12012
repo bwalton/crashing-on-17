@@ -1,0 +1,4 @@
+** Compiling =main.mm=
+#+begin_src sh
+  /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ "./build/iPhoneOS-11.3-Development/objs/main.mm" -arch arm64 -isysroot "/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk" -F/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks -miphoneos-version-min=11.3 -O0 -fexceptions -fblocks -fmodules -g -fobjc-legacy-dispatch -fobjc-abi-version=2 -c -o "./build/iPhoneOS-11.3-Development/objs/main.o"
+#+end_src

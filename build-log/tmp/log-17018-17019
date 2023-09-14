@@ -1,0 +1,19 @@
+* Generating =Entitlements.plist=
+#+begin_src sh
+  CODESIGN_ALLOCATE="/Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate" /usr/bin/codesign -f -s "Apple Development: Brian Walton (HZEX8V6MSF)" --entitlements ./build/iPhoneOS-11.3-Development/Entitlements.plist "./build/iPhoneOS-11.3-Development/crashing-on-17.app"
+#+end_src
+
+#+begin_src xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+  <dict>
+  <key>aps-environment</key>
+  <string>development</string>
+  <key>application-identifier</key>
+  <string>X92WQA3H4L.com.bevgem.tagify2</string>
+  <key>get-task-allow</key>
+  <true/>
+  </dict>
+  </plist>
+#+end_src

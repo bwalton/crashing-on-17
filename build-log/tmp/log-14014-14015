@@ -1,0 +1,4 @@
+*** Linking
+#+begin_src sh
+  /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -o "./build/iPhoneOS-11.3-Development/crashing-on-17.app/crashing-on-17"  -filelist "/var/folders/pm/cwm46kv91fbclkf7_fr_zjl00000gn/T/linker-objs-list20230914-43525-mdkv0j" -arch arm64 -isysroot "/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk" -F/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks -miphoneos-version-min=11.3 -Wl,-no_pie -L"/Library/RubyMotion/data/ios/11.3/iPhoneOS" -lrubymotion-static -lobjc -licucore -stdlib=libc++  -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreFoundation -framework CFNetwork -framework CoreAudio -framework MessageUI -framework QuartzCore -framework CoreServices
+#+end_src

@@ -1,0 +1,353 @@
+* Build initiated.
+  :PROPERTIES:
+  :platform: iPhoneOS
+  :time: 13:12:43.522
+  :ruby_compiler: /Library/RubyMotion/bin/ruby
+  :c_compiler: /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+  :cxx_compiler: /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  :archs: ["arm64"]
+  :END:
+** Resource Directories
+- /Users/brian/Projects/crashing-on-17/resources
+** BridgeSupport Files
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/RubyMotion.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/UIKit.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/Foundation.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreGraphics.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreFoundation.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/CFNetwork.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreAudio.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/MessageUI.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/QuartzCore.bridgesupport
+- /Users/brian/Projects/crashing-on-17/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreServices.bridgesupport
+** Compiling =./app/app_delegate.rb=
+*** IR Generation
+#+begin_src sh
+  /usr/bin/env OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES RM_DATADIR_PATH="/Library/RubyMotion/data/ios/16.4" VM_PLATFORM="iPhoneOS" VM_KERNEL_PATH="/Library/RubyMotion/data/ios/11.3/iPhoneOS/kernel-arm64.bc" VM_OPT_LEVEL="0" /usr/bin/arch -arch x86_64 "/Library/RubyMotion/bin/ruby" --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/RubyMotion.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/UIKit.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/Foundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreGraphics.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreFoundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CFNetwork.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreAudio.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/MessageUI.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/QuartzCore.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreServices.bridgesupport"  --project_dir "/Users/brian/Projects/crashing-on-17" --emit-llvm-fast ""
+  ./build/iPhoneOS-11.3-Development/objs/Users/brian/Projects/crashing-on-17/app/app_delegate.rb.arm64.s
+  MREP_76C08A96C3854DEF84335A1ECFAEB928
+  /Users/brian/Projects/crashing-on-17/app/app_delegate.rb
+#+end_src
+*** Bitcode Generation
+#+begin_src sh
+  /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -miphoneos-version-min=11.3 -fexceptions -c -arch arm64 "./build/iPhoneOS-11.3-Development/objs/Users/brian/Projects/crashing-on-17/app/app_delegate.rb.arm64.s" -o "./build/iPhoneOS-11.3-Development/objs/Users/brian/Projects/crashing-on-17/app/app_delegate.rb.arm64.o"
+#+end_src
+*** Compilation Result: Succeeded
+    :PROPERTIES:
+    :result: :success
+    :start_time: 13:12:43.657
+    :end_time: 13:12:44.223
+    :duration: 0.565434
+    :END:
+*** Fat Binary Generation.
+#+begin_src sh
+  /usr/bin/lipo -create "./build/iPhoneOS-11.3-Development/objs/Users/brian/Projects/crashing-on-17/app/app_delegate.rb.arm64.o" -output "./build/iPhoneOS-11.3-Development/objs/Users/brian/Projects/crashing-on-17/app/app_delegate.rb.o"
+#+end_src
+** Generating =init.mm=
+#+begin_src objective-c
+  #import <Foundation/Foundation.h>
+  
+  extern "C" {
+  void ruby_init(void);
+  void ruby_init_loadpath(void);
+  void ruby_script(const char *);
+  void *rb_vm_top_self(void);
+  void rb_define_global_const(const char *, void *);
+  void rb_rb2oc_exc_handler(void);
+  void ruby_init_device_repl(void);
+  void MREP_76C08A96C3854DEF84335A1ECFAEB928(void *, void *);
+  int rm_repl_port = 59333;
+  }
+  
+  extern "C"
+  void
+  RubyMotionInit(int argc, char **argv)
+  {
+  static bool initialized = false;
+  if (!initialized) {
+  ruby_init();
+  ruby_init_loadpath();
+  if (argc > 0) {
+  const char *progname = argv[0];
+  ruby_script(progname);
+  }
+  #if !__LP64__
+  try {
+  #endif
+  void *self = rb_vm_top_self();
+  ruby_init_device_repl();
+  rb_define_global_const("RUBYMOTION_ENV", @"development");
+  rb_define_global_const("RUBYMOTION_VERSION", @"8.17");
+  MREP_76C08A96C3854DEF84335A1ECFAEB928(self, 0);
+  #if !__LP64__
+  }
+  catch (...) {
+  rb_rb2oc_exc_handler();
+  }
+  #endif
+  initialized = true;
+  }
+  }
+#+end_src
+** Compiling =init.mm=
+#+begin_src sh
+  /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ "./build/iPhoneOS-11.3-Development/objs/init.mm" -arch arm64 -isysroot "/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk" -F/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks -miphoneos-version-min=11.3 -O0 -fexceptions -fblocks -fmodules -g -fobjc-legacy-dispatch -fobjc-abi-version=2 -c -o "./build/iPhoneOS-11.3-Development/objs/init.o"
+#+end_src
+** Generating =main.mm=
+#+begin_src objective-c
+  #import <Foundation/Foundation.h>
+  
+  extern "C" {
+  void ruby_init(void);
+  void ruby_init_loadpath(void);
+  void ruby_script(const char *);
+  void *rb_vm_top_self(void);
+  void rb_define_global_const(const char *, void *);
+  void rb_rb2oc_exc_handler(void);
+  void ruby_init_device_repl(void);
+  void MREP_76C08A96C3854DEF84335A1ECFAEB928(void *, void *);
+  int rm_repl_port = 59333;
+  }
+  
+  extern "C"
+  void
+  RubyMotionInit(int argc, char **argv)
+  {
+  static bool initialized = false;
+  if (!initialized) {
+  ruby_init();
+  ruby_init_loadpath();
+  if (argc > 0) {
+  const char *progname = argv[0];
+  ruby_script(progname);
+  }
+  #if !__LP64__
+  try {
+  #endif
+  void *self = rb_vm_top_self();
+  ruby_init_device_repl();
+  rb_define_global_const("RUBYMOTION_ENV", @"development");
+  rb_define_global_const("RUBYMOTION_VERSION", @"8.17");
+  MREP_76C08A96C3854DEF84335A1ECFAEB928(self, 0);
+  #if !__LP64__
+  }
+  catch (...) {
+  rb_rb2oc_exc_handler();
+  }
+  #endif
+  initialized = true;
+  }
+  }
+#+end_src
+** Compiling =main.mm=
+#+begin_src sh
+  /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ "./build/iPhoneOS-11.3-Development/objs/main.mm" -arch arm64 -isysroot "/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk" -F/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks -miphoneos-version-min=11.3 -O0 -fexceptions -fblocks -fmodules -g -fobjc-legacy-dispatch -fobjc-abi-version=2 -c -o "./build/iPhoneOS-11.3-Development/objs/main.o"
+#+end_src
+** Creating app.
+*** Object Files to Link.
+#+begin_src 
+  ./build/iPhoneOS-11.3-Development/objs/init.o
+  ./build/iPhoneOS-11.3-Development/objs/main.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/UIKit_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/Foundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/CoreGraphics_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/CoreFoundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneOS/CFNetwork_stubs.o
+  ./build/iPhoneOS-11.3-Development/objs/Users/brian/Projects/crashing-on-17/app/app_delegate.rb.o
+#+end_src
+*** Linking
+#+begin_src sh
+  /Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -o "./build/iPhoneOS-11.3-Development/crashing-on-17.app/crashing-on-17"  -filelist "/var/folders/pm/cwm46kv91fbclkf7_fr_zjl00000gn/T/linker-objs-list20230914-43525-mdkv0j" -arch arm64 -isysroot "/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk" -F/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks -miphoneos-version-min=11.3 -Wl,-no_pie -L"/Library/RubyMotion/data/ios/11.3/iPhoneOS" -lrubymotion-static -lobjc -licucore -stdlib=libc++  -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreFoundation -framework CFNetwork -framework CoreAudio -framework MessageUI -framework QuartzCore -framework CoreServices
+#+end_src
+* Compiling Asset Bundles
+** Command
+#+begin_src sh
+  "/Applications/Xcode-14.3.1.app/Contents/Developer/usr/bin/actool" --output-format human-readable-text --notices --warnings --platform iphoneos --minimum-deployment-target 11.3 --target-device iphone --target-device ipad  --app-icon 'AppIcon' --launch-image 'LaunchImage' --output-partial-info-plist '/Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/AssetCatalog-Info.plist' --compress-pngs --compile "/Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app" "/Users/brian/Projects/crashing-on-17/resources/Assets.xcassets"
+#+end_src
+
+#+begin_src xml
+  /* com.apple.actool.document.warnings */
+  /Users/brian/Projects/crashing-on-17/resources/Assets.xcassets:./LaunchImage.launchimage: warning: Launch images are deprecated in iOS 13.0. Use a launch storyboard or XIB instead.
+  /Users/brian/Projects/crashing-on-17/resources/Assets.xcassets:./LaunchImage.launchimage/(null)[2d][Default-375w-667h@2x.png]: warning: The launch image set "LaunchImage" has 2 unassigned children.
+  /* com.apple.actool.document.notices */
+  /Users/brian/Projects/crashing-on-17/resources/Assets.xcassets:./AppIcon.appiconset/[][ipad][76x76][][][1x][][][]: notice: 76x76@1x app icons only apply to iPad apps targeting releases of iOS prior to 10.0.
+  /* com.apple.actool.compilation-results */
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/AssetCatalog-Info.plist
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/AppIcon60x60@2x.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/AppIcon76x76@2x~ipad.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/Assets.car
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/LaunchImage-1100-Portrait-2436h@3x.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/LaunchImage-700-568h@2x.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/LaunchImage-700-Portrait@2x~ipad.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/LaunchImage-700-Portrait~ipad.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/LaunchImage-700@2x.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/LaunchImage-800-667h@2x.png
+  /Users/brian/Projects/crashing-on-17/build/iPhoneOS-11.3-Development/crashing-on-17.app/LaunchImage-800-Portrait-736h@3x.png
+  
+#+end_src
+* Writing Info.plist =./build/iPhoneOS-11.3-Development/crashing-on-17.app/Info.plist=
+#+begin_src xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+  <dict>
+  <key>BuildMachineOSBuild</key>
+  <string>22G90</string>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleName</key>
+  <string>crashing-on-17</string>
+  <key>CFBundleDisplayName</key>
+  <string>crashing-on-17</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.bevgem.tagify2</string>
+  <key>CFBundleExecutable</key>
+  <string>crashing-on-17</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <key>CFBundleVersion</key>
+  <string>1.0</string>
+  <key>CFBundleIcons</key>
+  <dict>
+  <key>CFBundlePrimaryIcon</key>
+  <dict>
+  <key>CFBundleIconName</key>
+  <string>AppIcon</string>
+  <key>CFBundleIconFiles</key>
+  <array>
+  <string>AppIcon60x60</string>
+  </array>
+  </dict>
+  </dict>
+  <key>CFBundleIcons~ipad</key>
+  <dict>
+  <key>CFBundlePrimaryIcon</key>
+  <dict>
+  <key>CFBundleIconName</key>
+  <string>AppIcon</string>
+  <key>CFBundleIconFiles</key>
+  <array>
+  <string>AppIcon60x60</string>
+  <string>AppIcon76x76</string>
+  </array>
+  </dict>
+  </dict>
+  <key>UIRequiresFullScreen</key>
+  <true/>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
+  <key>UILaunchImages</key>
+  <array>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-1100-Portrait-2436h</string>
+  <key>UILaunchImageSize</key>
+  <string>{375, 812}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>11.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-800-Portrait-736h</string>
+  <key>UILaunchImageSize</key>
+  <string>{414, 736}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>8.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-800-667h</string>
+  <key>UILaunchImageSize</key>
+  <string>{375, 667}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>8.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-700</string>
+  <key>UILaunchImageSize</key>
+  <string>{320, 480}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>7.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-700-568h</string>
+  <key>UILaunchImageSize</key>
+  <string>{320, 568}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>7.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-700-Portrait</string>
+  <key>UILaunchImageSize</key>
+  <string>{768, 1024}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>7.0</string>
+  </dict>
+  </array>
+  <key>MinimumOSVersion</key>
+  <string>11.3</string>
+  <key>CFBundleSupportedPlatforms</key>
+  <array>
+  <string>iPhoneOS</string>
+  </array>
+  <key>CFBundleIconFiles</key>
+  <array>
+  <string>AppIcon60x60</string>
+  </array>
+  <key>UIAppFonts</key>
+  <array>
+  </array>
+  <key>UIDeviceFamily</key>
+  <array>
+  <integer>1</integer>
+  <integer>2</integer>
+  </array>
+  <key>UISupportedInterfaceOrientations</key>
+  <array>
+  <string>UIInterfaceOrientationPortrait</string>
+  </array>
+  <key>UIStatusBarStyle</key>
+  <string>UIStatusBarStyleDefault</string>
+  <key>UIBackgroundModes</key>
+  <array>
+  </array>
+  <key>DTXcode</key>
+  <string>01431</string>
+  <key>DTXcodeBuild</key>
+  <string>14E300c</string>
+  <key>DTSDKName</key>
+  <string>iphoneos16.4</string>
+  <key>DTSDKBuild</key>
+  <string>20E238</string>
+  <key>DTPlatformName</key>
+  <string>iphoneos</string>
+  <key>DTCompiler</key>
+  <string>com.apple.compilers.llvm.clang.1_0</string>
+  <key>DTPlatformVersion</key>
+  <string>16.4</string>
+  <key>DTPlatformBuild</key>
+  <string>20E238</string>
+  </dict>
+  </plist>
+#+end_src
